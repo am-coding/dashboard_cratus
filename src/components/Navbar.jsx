@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, Toolbar, Typography} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import {CssBaseline, Divider, Drawer, Hidden, List, ListItem} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import logo from '../assets/logo.png';
 import NavButton from './NavButton';
