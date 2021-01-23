@@ -1,5 +1,10 @@
 import Navbar from './components/Navbar'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 const THEME = createMuiTheme({
   typography: {
@@ -15,11 +20,17 @@ const THEME = createMuiTheme({
 
 function App() {
   return (
+    <Router>
     <MuiThemeProvider theme={THEME}>
     <div className="App">
-     <Navbar />
-    </div>
+    <Switch>
+          <Route path="/dashboard">
+            <Navbar />
+          </Route>
+        </Switch>
+        </div> 
     </MuiThemeProvider>
+    </Router>
   );
 }
 

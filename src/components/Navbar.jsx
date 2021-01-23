@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {CssBaseline, Divider, Drawer, Hidden, List, ListItem} from '@material-ui/core';
+import {CssBaseline, AppBar, Toolbar, IconButton, Divider, Drawer, Hidden, List, ListItem} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+// import {MenuIcon} from '@material-ui/icons'; 
 import logo from '../assets/logo.png';
 import NavButton from './NavButton';
+import ManageGrid from './ManageGrid';
 import website from '../assets/website.svg';
 import analytics from '../assets/analytics.svg';
 import bag from '../assets/Bag.svg';
@@ -11,31 +13,38 @@ import customer from '../assets/customer.svg';
 import manage from '../assets/manage.svg';
 import document from '../assets/Document.svg';
 import setting from '../assets/Setting.svg';
+import InputWithIcon from './SearchInput';
 
 const items =  [
   {
     icon: analytics,
-    title: 'Analytics'
+    title: 'Analytics',
+    link: '/dashboard',
   },
   {
     icon: customer,
-    title: 'Customers'
+    title: 'Customers',
+    link: 'customers',
   },
   {
     icon: bag,
-    title: 'Billing'
+    title: 'Billing',
+    link: 'billing',
   },
   {
     icon: document,
-    title: 'Manage Games'
+    title: 'Manage Games',
+    link: 'manage-games',
   },
   {
     icon: manage,
-    title: 'Account'
+    title: 'Account',
+    link: 'account',
   },
   {
     icon: website,
-    title: 'Website'
+    title: 'Website',
+    link: 'website',
   },
 ]
 
@@ -55,6 +64,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+      backgroundColor: 'white', 
+      height: '14vh',
+      boxShadow: 'none',
+      justifyContent: 'center',
     },
   },
   menuButton: {
@@ -66,6 +79,10 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   drawerPaper: {
     width: drawerWidth,
+  },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   content: {
     flexGrow: 1,
@@ -100,9 +117,13 @@ function Navbar(props) {
       <img className={classes.logo} src={logo} alt="logo" />
       <div />
       <List>
-        {items.map((data, index) => (
+        {items.map((data) => (
           <ListItem className={classes.item} key={data.title}>
-            <NavButton icon={data.icon} title={data.title} />
+            <NavButton 
+            icon={data.icon} 
+            title={data.title} 
+            link={data.link}
+            />
           </ListItem>
         ))}
       </List>
@@ -118,8 +139,8 @@ function Navbar(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      {/* <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -127,13 +148,12 @@ function Navbar(props) {
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
-            <MenuIcon />
+            {/* <MenuIcon /> */}
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Responsive drawer
-          </Typography>
+          <InputWithIcon />
+          <ManageGrid />
         </Toolbar>
-      </AppBar> */}
+      </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">

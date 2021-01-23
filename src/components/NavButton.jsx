@@ -1,7 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
+import {
+  NavLink
+} from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
    button: {
        color:  '#808191',
@@ -22,16 +24,23 @@ const useStyles = makeStyles((theme) => ({
             filter: 'brightness(0) invert(1)',
            }
    },
+   '&.active': {
+        backgroundColor: '#B9181E',
+        color:  '#fff',
+        '& $image': {
+          filter: 'brightness(0) invert(1)',
+         }
+   }
 },
 image: {
     filter: 'invert(1)',
 }
   }));
   
-const NavButton = ({title, icon}) => {
+const NavButton = ({title, icon, link}) => {
     const classes = useStyles();
     return (
-        <Button className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
+        <Button component={NavLink} to={{pathname: `${link}`}} className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
     );
   }
 
