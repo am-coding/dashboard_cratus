@@ -24,27 +24,27 @@ const items =  [
   {
     icon: customer,
     title: 'Customers',
-    link: 'customers',
+    link: '/customers',
   },
   {
     icon: bag,
     title: 'Billing',
-    link: 'billing',
+    link: '/billing',
   },
   {
     icon: document,
     title: 'Manage Games',
-    link: 'manage-games',
+    link: '/manage-games',
   },
   {
     icon: manage,
     title: 'Account',
-    link: 'account',
+    link: '/account',
   },
   {
     icon: website,
     title: 'Website',
-    link: 'website',
+    link: '/website',
   },
 ]
 

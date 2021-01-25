@@ -34,13 +34,16 @@ const useStyles = makeStyles((theme) => ({
 },
 image: {
     filter: 'invert(1)',
+},
+activeLink: {
+  color: 'red'
 }
   }));
   
 const NavButton = ({title, icon, link}) => {
     const classes = useStyles();
     return (
-        <Button component={NavLink} to={{pathname: `${link}`}} className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
+        <Button exact component={NavLink} to={{pathname: `${link}`}} className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
     );
   }
 
