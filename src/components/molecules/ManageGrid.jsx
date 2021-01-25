@@ -1,17 +1,17 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import ChatIcon from '../assets/Chat.png';
-import NotificationIcon from '../assets/Notification.png';
-import AvatarIcon from '../assets/Avatar.png';
+import ChatIcon from '../../assets/Chat.png';
+import NotificationIcon from '../../assets/Notification.png';
+import AvatarIcon from '../../assets/Avatar.png';
 import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-    },
+    }, 
     link: {
-        color: '#808191',
+        color: theme.palette.secondary.main,
         textDecoration: 'none'
     }
   }));

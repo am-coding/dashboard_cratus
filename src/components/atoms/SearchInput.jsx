@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
-import SearchIcon from '../assets/Search.png';
+import SearchIcon from '../../assets/Search.png';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   div: {
    display: 'grid',
    gridTemplateColumns: 'auto auto',

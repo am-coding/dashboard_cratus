@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Navbar from './components/organisms/Navbar'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {
   BrowserRouter as Router,
@@ -14,7 +14,18 @@ const THEME = createMuiTheme({
    "fontWeightRegular": 400,
    "fontWeightMedium": 500,
    "fontWeightBold": 600,
-  }
+  },
+  palette: {
+    primary: {
+      main: '#B9181E'
+    },
+    secondary: {
+      main: '#808191'
+    },
+    white: {
+      main: '#FFFFFF'
+    }
+  },
 });
 
 

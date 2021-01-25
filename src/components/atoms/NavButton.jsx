@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
    button: {
-       color:  '#808191',
+       color:  theme.palette.secondary.main,
        width: '86%',
        height: '3rem',
        textTransform: 'capitalize',
@@ -18,15 +18,15 @@ const useStyles = makeStyles((theme) => ({
        fontSize: '0.7rem',
        fontWeight: '500',
        '&:hover': {
-           backgroundColor: '#B9181E',
-           color:  '#fff',
+           backgroundColor: theme.palette.primary.main,
+           color:  theme.palette.white.main,
            '& $image': {
             filter: 'brightness(0) invert(1)',
            }
    },
    '&.active': {
-        backgroundColor: '#B9181E',
-        color:  '#fff',
+        backgroundColor: theme.palette.primary.main,
+        color:  theme.palette.white.main,
         '& $image': {
           filter: 'brightness(0) invert(1)',
          }

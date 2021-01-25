@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {CssBaseline, AppBar, Toolbar, IconButton, Divider, Drawer, Hidden, List, ListItem} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-// import {MenuIcon} from '@material-ui/icons'; 
-import logo from '../assets/logo.png';
-import NavButton from './NavButton';
-import ManageGrid from './ManageGrid';
-import website from '../assets/website.svg';
-import analytics from '../assets/analytics.svg';
-import bag from '../assets/Bag.svg';
-import customer from '../assets/customer.svg';
-import manage from '../assets/manage.svg';
-import document from '../assets/Document.svg';
-import setting from '../assets/Setting.svg';
-import InputWithIcon from './SearchInput';
+import MenuIcon from '@material-ui/icons/Menu'; 
+import logo from '../../assets/logo.png';
+import NavButton from '../atoms/NavButton';
+import ManageGrid from '../molecules/ManageGrid';
+import website from '../../assets/website.svg';
+import analytics from '../../assets/analytics.svg';
+import bag from '../../assets/Bag.svg';
+import customer from '../../assets/customer.svg';
+import manage from '../../assets/manage.svg';
+import document from '../../assets/Document.svg';
+import setting from '../../assets/Setting.svg';
+import InputWithIcon from '../atoms/SearchInput';
 
 const items =  [
   {
@@ -63,12 +63,13 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-      backgroundColor: 'white', 
-      height: '14vh',
-      boxShadow: 'none',
-      justifyContent: 'center',
+     
     },
+    marginLeft: drawerWidth,
+    backgroundColor: 'white', 
+    height: '14vh',
+    boxShadow: 'none',
+    justifyContent: 'center',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -148,7 +149,7 @@ function Navbar(props) {
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
-            {/* <MenuIcon /> */}
+            <MenuIcon htmlColor="#808191" />
           </IconButton>
           <InputWithIcon />
           <ManageGrid />
