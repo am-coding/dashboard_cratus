@@ -3,14 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '../../assets/Search.png';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   div: {
    display: 'grid',
    gridTemplateColumns: 'auto auto',
    columnGap: '0.5rem'
   },
   input: {
-   fontSize: '0.9rem',
+   fontSize: theme.typography.subtitle2.fontSize,
   }
 }));
 

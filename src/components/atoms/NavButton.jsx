@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
        marginLeft: '1rem',
        paddingLeft: '1.5rem', 
        justifyContent: "flex-start",
-       fontSize: '0.7rem',
+       fontSize: theme.typography.caption.fontSize,
        fontWeight: '500',
        '&:hover': {
            backgroundColor: theme.palette.primary.main,

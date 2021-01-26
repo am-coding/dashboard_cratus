@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     }, 
     link: {
         color: theme.palette.secondary.main,
-        textDecoration: 'none'
+        textDecoration: 'none',
+        fontSize: theme.typography.subtitle2.fontSize
     }
   }));
 

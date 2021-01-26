@@ -27,13 +27,6 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
       margin: 0,
     },
-    paper: {
-      height: 140,
-      width: 100,
-    },
-    control: {
-      padding: theme.spacing(2),
-    },
   }));
 
 // Analytics Page/Template

@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         borderRadius: '15px',
         boxShadow: '0px 2.4px 1.5px rgba(0, 0, 0, 0.25)',
-        minWidth: '11rem',
+        minWidth: '10.5rem',
       },
       content: {
         textAlign: 'center',
@@ -18,10 +18,10 @@ const useStyles = makeStyles((theme) => ({
       stat: { 
         color: theme.palette.primary.main,
         fontWeight: theme.typography.fontWeightBold,
-        fontSize: 17
+        fontSize: theme.typography.subtitle1.fontSize
       },
       title: {
-          fontSize: 10,
+          fontSize: theme.typography.caption.fontSize,
           color: theme.palette.secondary.main,
           fontWeight: theme.typography.fontWeightBold,
           marginTop: '0.4rem'
