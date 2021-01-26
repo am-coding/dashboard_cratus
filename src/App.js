@@ -20,9 +20,6 @@ function App() {
           <Route exact path="/dashboard">
             <Analytics />
           </Route> 
-          <Route exact path="/customers">
-            <Analytics />
-          </Route>
         </Switch>
         </div> 
     </MuiThemeProvider>

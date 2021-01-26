@@ -14,7 +14,8 @@ export const THEME = createMuiTheme({
         main: '#B9181E'
       },
       secondary: {
-        main: '#808191'
+        main: '#808191',
+        light: '#C4C4C4',
       },
       white: {
         main: '#FFFFFF'

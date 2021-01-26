@@ -13,8 +13,9 @@ import customer from '../../assets/customer.svg';
 import manage from '../../assets/manage.svg';
 import document from '../../assets/Document.svg';
 import setting from '../../assets/Setting.svg';
-import InputWithIcon from '../atoms/SearchInput';
+import SearchInput from '../atoms/SearchInput';
 
+// Navbar Items Array of objects
 const items =  [
   {
     icon: analytics,
@@ -103,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+// Navigation Sidebar
 function Navbar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -151,7 +153,7 @@ function Navbar(props) {
           >
             <MenuIcon htmlColor="#808191" />
           </IconButton>
-          <InputWithIcon />
+          <SearchInput />
           <ManageGrid />
         </Toolbar>
       </AppBar>
