@@ -18,10 +18,16 @@ const useStyles = makeStyles((theme) => ({
       stat: { 
         color: theme.palette.primary.main,
         fontWeight: theme.typography.fontWeightBold,
-        fontSize: theme.typography.subtitle1.fontSize
+        fontSize: theme.typography.subtitle1.fontSize,
+        [theme.breakpoints.up('xl')]: {
+          fontSize: theme.typography.h4.fontSize,
+        },
       },
       title: {
           fontSize: theme.typography.caption.fontSize,
+          [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.subtitle1.fontSize,
+          },
           color: theme.palette.secondary.main,
           fontWeight: theme.typography.fontWeightBold,
           marginTop: '0.4rem'

@@ -16,7 +16,10 @@ const useStyles = makeStyles((theme) => ({
     link: {
         color: theme.palette.secondary.main,
         textDecoration: 'none',
-        fontSize: theme.typography.subtitle2.fontSize
+        fontSize: theme.typography.subtitle2.fontSize,
+        [theme.breakpoints.up('xl')]: {
+          fontSize: theme.typography.h6.fontSize,
+        },
     }
   }));
 

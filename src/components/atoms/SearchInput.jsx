@@ -7,10 +7,15 @@ const useStyles = makeStyles((theme) => ({
   div: {
    display: 'grid',
    gridTemplateColumns: 'auto auto',
-   columnGap: '0.5rem'
+   columnGap: '0.5rem',
+   alignItems: 'center'
   },
   input: {
    fontSize: theme.typography.subtitle2.fontSize,
+   [theme.breakpoints.up('xl')]: {
+    fontSize: theme.typography.h5.fontSize,
+
+  },
   }
 }));
 

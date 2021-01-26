@@ -60,13 +60,19 @@ const useStyles = makeStyles((theme) => ({
       width: drawerWidth,
       flexShrink: 0,
     },
+    [theme.breakpoints.up('xl')]: {
+      width: 340,
+    },
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
-     
     },
     marginLeft: drawerWidth,
+    [theme.breakpoints.up('xl')]: {
+      width: `calc(100% - 340px)`,
+      marginLeft: 340,
+    },
     backgroundColor: 'white', 
     height: '14vh',
     boxShadow: 'none',
@@ -81,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   drawerPaper: {
     width: drawerWidth,
+    [theme.breakpoints.up('xl')]: {
+      width: 340,
+    },
   },
   toolbar: {
     display: 'flex',
@@ -92,7 +101,11 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
       padding: '1rem',
-      marginTop: '1rem'
+      marginTop: '1rem',
+      [theme.breakpoints.up('xl')]: {
+        padding: '2rem',
+        marginTop: '3rem',
+      },
   },
   item: {
       padding: '0.1rem',

@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
        paddingLeft: '1.5rem', 
        justifyContent: "flex-start",
        fontSize: theme.typography.caption.fontSize,
+       [theme.breakpoints.up('xl')]: {
+        fontSize: theme.typography.subtitle1.fontSize,
+        height: '4rem',
+      },
        fontWeight: '500',
        '&:hover': {
            backgroundColor: theme.palette.primary.main,
