@@ -35,13 +35,13 @@ const ManageGrid = () => {
                 <NavLink className={classes.link} to="/manage">Manage</NavLink>
               </Grid>
               <Grid item>
-                  <img src={ChatIcon} alt="chat-icon" />
+                  <img width="100%" height="auto" src={ChatIcon} alt="chat-icon" />
               </Grid>
               <Grid item>
-                  <img src={NotificationIcon} alt="notification-icon" />
+                  <img width="100%" height="auto" src={NotificationIcon} alt="notification-icon" />
               </Grid>
               <Grid item>
-                  <img src={AvatarIcon} alt="avatar-icon" />
+                  <img width="100%" height="auto" src={AvatarIcon} alt="avatar-icon" />
               </Grid>
             </Grid>
           </div>

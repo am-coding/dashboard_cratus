@@ -100,12 +100,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   logo: {
-      padding: '1rem',
-      marginTop: '1rem',
-      [theme.breakpoints.up('xl')]: {
-        padding: '2rem',
-        marginTop: '3rem',
-      },
+      height: '14vh',
+      display: 'flex',
+      alignItems: 'center',
+      marginLeft: '1rem',
   },
   item: {
       padding: '0.1rem',
@@ -129,9 +127,11 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <div>
-      <img className={classes.logo} src={logo} alt="logo" />
-      <div />
+    <>
+    <div className={classes.logo}>
+    <img width="100%" height="auto" src={logo} alt="logo" />
+    </div>
+      <div>
       <List>
         {items.map((data) => (
           <ListItem className={classes.item} key={data.title}>
@@ -148,6 +148,7 @@ function Navbar(props) {
         <NavButton icon={setting} title="Settings" />
       </div>
     </div>
+    </>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;

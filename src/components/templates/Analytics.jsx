@@ -28,7 +28,12 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
       [theme.breakpoints.down('md')]: {
         '&:last-child': {
-            paddingRight: 12,
+            paddingRight: 34,
+        },
+      },
+      [theme.breakpoints.down('sm')]: {
+        '&:last-child': {
+            paddingRight: 0,
         },
       }
     },
