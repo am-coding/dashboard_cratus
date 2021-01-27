@@ -145,7 +145,7 @@ function Navbar(props) {
       </List>
       <Divider variant="middle" />
       <div className={classes.setting}>
-        <NavButton icon={setting} title="Settings" />
+        <NavButton icon={setting} title="Settings" link="/settings" />
       </div>
     </div>
     </>

@@ -25,17 +25,8 @@ const statCardData = [
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      margin: 0,
-      [theme.breakpoints.down('md')]: {
-        '&:last-child': {
-            paddingRight: 34,
-        },
-      },
-      [theme.breakpoints.down('sm')]: {
-        '&:last-child': {
-            paddingRight: 0,
-        },
-      }
+      width: '90%',
+      margin: '0 auto',
     },
   }));
 
@@ -43,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 const Analytics = () => {
     const classes = useStyles();
     return (
-        <Grid spacing={8} justify="center" container className={classes.root}>
+        <Grid spacing={8}  container className={classes.root}>
             {statCardData.map((data, index) => {
                 return(
                     <Grid xs={12} sm={6} md={3} item>
