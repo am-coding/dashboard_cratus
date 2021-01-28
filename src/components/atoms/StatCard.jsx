@@ -18,15 +18,15 @@ const useStyles = makeStyles((theme) => ({
       stat: { 
         color: theme.palette.primary.main,
         fontWeight: theme.typography.fontWeightBold,
-        fontSize: theme.typography.subtitle1.fontSize,
+        fontSize: theme.typography.h6.fontSize,
         [theme.breakpoints.up('xl')]: {
-          fontSize: theme.typography.h4.fontSize,
+          fontSize: theme.typography.h3.fontSize,
         },
       },
       title: {
           fontSize: theme.typography.caption.fontSize,
           [theme.breakpoints.up('xl')]: {
-            fontSize: theme.typography.subtitle1.fontSize,
+            fontSize: theme.typography.h6.fontSize,
           },
           color: theme.palette.secondary.main,
           fontWeight: theme.typography.fontWeightBold,
@@ -42,9 +42,15 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 2px',
         transform: 'scale(1.1)',
         color: theme.palette.secondary.light,
+        [theme.breakpoints.up('xl')]: {
+          fontSize: '2rem',
+        },
       },
       button: {
         padding: 0,
+        [theme.breakpoints.up('xl')]: {
+          marginRight: '1.5rem',
+        },
         '&:hover': {
             background: 'none'
         }
