@@ -2,6 +2,7 @@ import React from 'react';
 import StatCard from '../atoms/StatCard';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import RevenueChart from '../molecules/RevenueChart'
 
 const statCardData = [
     {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 const Analytics = () => {
     const classes = useStyles();
     return (
-        <Grid spacing={8}  container className={classes.root}>
+        <Grid spacing={8} container className={classes.root}>
             {statCardData.map((data, index) => {
                 return(
                     <Grid xs={12} sm={6} md={3} item>
@@ -42,6 +43,12 @@ const Analytics = () => {
                     </Grid>
                 )
             })}
+            <Grid item>
+                <RevenueChart 
+                    title="Revenue to Date"
+                    data="$115,323.00"
+                />
+            </Grid>
         </Grid>
     )
 }
