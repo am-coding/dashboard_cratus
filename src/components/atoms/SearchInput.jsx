@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
    fontSize: theme.typography.subtitle2.fontSize,
    [theme.breakpoints.up('xl')]: {
     fontSize: theme.typography.h5.fontSize,
-
   },
   }
 }));

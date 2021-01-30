@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid } from 'recharts';
+import { LineChart, Line, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const data = [
     {
@@ -23,14 +23,21 @@ const data = [
     {
        uv: 3490, pv: 4300, amt: 2100,
     },
+    {
+      uv: 3990, pv: 6300, amt: 1100,
+   },
+   {
+      uv: 6690, pv: 3300, amt: 3100,
+   },
   ];
 const CustomLineChart = () => {
     return (
-        <LineChart width={450} height={100} data={data}>
-            <CartesianGrid horizontal={false} strokeWidth="3" />
-          
-            <Line type="linear" dataKey="uv" stroke="#B9181E" strokeWidth="4" dot={false} />
-        </LineChart>
+       <ResponsiveContainer width="100%" height={110}>
+         <LineChart data={data}>
+               <CartesianGrid horizontal={false} strokeWidth="3" />
+               <Line type="linear" dataKey="uv" stroke="#B9181E" strokeWidth="4" dot={false} />
+         </LineChart>
+        </ResponsiveContainer>
     )
 }
 

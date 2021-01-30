@@ -38,7 +38,7 @@ const Analytics = () => {
         <Grid spacing={8} container className={classes.root}>
             {statCardData.map((data, index) => {
                 return(
-                    <Grid xs={12} sm={6} md={3} item>
+                    <Grid key={index} xs={12} sm={6} md={3} item>
                         <StatCard title={data.title} stat={data.stat} key={index} />
                     </Grid>
                 )

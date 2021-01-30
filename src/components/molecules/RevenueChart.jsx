@@ -1,30 +1,61 @@
 import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Box, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Paper, Box, Typography, IconButton, Container } from '@material-ui/core';
 import LineChart from '../atoms/LineChart';
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//     },
-//   }));
+import rightArrow from '../../assets/right-arrow.png';
+import leftArrow from '../../assets/left-arrow.png';
+const useStyles = makeStyles((theme) => ({
+    root: {
+        padding: '1.3rem',
+        [theme.breakpoints.up('xl')]: {
+            padding: '2.3rem',
+        },
+        borderRadius: '15px',
+        width: '50vw'
+    },
+    title: {
+        color: theme.palette.secondary.main,
+        fontWeight: theme.typography.fontWeightMedium,
+        fontSize: theme.typography.caption.fontSize,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.subtitle1.fontSize,
+        },
+    },
+    data: {
+        color: theme.palette.primary.main,
+        fontWeight: theme.typography.fontWeightBold,
+        fontSize: theme.typography.h6.fontSize,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.h4.fontSize,
+        },
+    },
+    button: {
+        padding: '0.35rem',
+    }
+  }));
 
 function RevenueChart({title, data}) {
-    // const classes = useStyles();
+    const classes = useStyles();
   
     return (
-        <Paper style={{padding: '2rem', borderRadius: '12px'}}>
-            <Box>
+        <Paper className={classes.root}>
+            <Box display="flex" justifyContent="space-between">
                 <Box>
-                    <Typography variant="subtitle1">
+                    <Typography className={classes.title}>
                         {title}
                     </Typography>
-                    <Typography variant="h2">
+                    <Typography className={classes.data}>
                         {data}
                     </Typography>
                 </Box>
-
+                <Box>
+                    <IconButton className={classes.button}><img width="100%" height="auto" src={leftArrow} alt="left-arrow-icon" /></IconButton>
+                    <IconButton className={classes.button}><img width="100%" height="auto" src={rightArrow} alt="right-arrow-icon" /></IconButton>
+                </Box>
             </Box>
+            <Container>
             <LineChart />
+            </Container>
         </Paper>
     );
 }
