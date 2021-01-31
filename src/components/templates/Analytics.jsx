@@ -3,7 +3,7 @@ import StatCard from '../atoms/StatCard';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import RevenueChart from '../molecules/RevenueChart'
-
+import GameReview from '../molecules/GameReview';
 const statCardData = [
     {
         title: 'MRR',
@@ -43,11 +43,14 @@ const Analytics = () => {
                     </Grid>
                 )
             })}
-            <Grid item>
+            <Grid xs={12} md={9} item>
                 <RevenueChart 
                     title="Revenue to Date"
                     data="$115,323.00"
                 />
+            </Grid>
+            <Grid xs={6} md={3} item>
+                <GameReview />
             </Grid>
         </Grid>
     )
