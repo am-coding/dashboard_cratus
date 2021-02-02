@@ -8,7 +8,7 @@ const DownloadChart = () => {
                 <Typography>Downloads</Typography>
                 <Box>
                 <Typography>09/11/2020</Typography>
-                <IconButton></IconButton>
+                <IconButton>Button</IconButton>
                 </Box>
             </Box>
             <DetailedLineChart />
