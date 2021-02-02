@@ -1,40 +1,37 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
 
 const data = [
     {
-      name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+      name: '06:00', downloads: 100, data: 112,
     },
     {
-      name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+      name: '09:00', downloads: 200, data: 130,
     },
     {
-      name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+      name: '12:00', downloads: 300, data: 100,
     },
     {
-      name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+      name: '15:00', downloads: 400, data: 290,
     },
     {
-      name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-    },
+      name: '18:00', downloads: 500, data: 320,
+    }, 
     {
-      name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-    },
-    {
-      name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+      name: '21:00', downloads: 600, data: 590,
     },
   ];
 
 const DetailedLineChart = () => {
     return (
-       <ResponsiveContainer width="100%" height={110}>
+       <ResponsiveContainer width="100%" height={220}>
          <LineChart data={data}>
                <CartesianGrid horizontal={false} strokeWidth="3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+                <XAxis dx={5} tick={{fontSize: 11}} dy={10} axisLine={false} tickLine={false} dataKey="name" />
+                <YAxis dx={-25} tick={{fontSize: 11}} dataKey="downloads" axisLine={false} tickLine={false} />
                 <Tooltip />
-                <Legend />
-               <Line type="linear" dataKey="uv" stroke="#B9181E" strokeWidth="4" dot={false} />
+                {/* <Legend /> */}
+               <Line type="linear" dataKey="data" stroke="#B9181E" strokeWidth="4" dot={false} />
          </LineChart>
         </ResponsiveContainer>
     )

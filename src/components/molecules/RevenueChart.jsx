@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
             padding: '2.3rem',
         },
         borderRadius: '15px',
-        width: '100%'
+        width: '100%',
     },
     title: {
         color: theme.palette.secondary.main,
