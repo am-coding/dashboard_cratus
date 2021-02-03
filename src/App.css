@@ -2,6 +2,7 @@
 .App {
     font-family: 'Inter', sans-serif;
     display: flex;
+    background-color: #f2f2f2;
 }
 
 .App:nth-child(1) {
