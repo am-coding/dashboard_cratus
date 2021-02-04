@@ -5,6 +5,8 @@ import { Grid } from '@material-ui/core';
 import RevenueChart from '../molecules/RevenueChart'
 import GameReview from '../molecules/GameReview';
 import DownloadChart from '../molecules/DownloadChart';
+import CustomerStats from '../molecules/CustomerStats';
+// import HoursPlayed from '../molecules/HoursPlayed';
 
 const statCardData = [
     {
@@ -57,6 +59,12 @@ const Analytics = () => {
             <Grid xs={6} item>
                 <DownloadChart />
             </Grid>
+            <Grid xs={3} item>
+                <CustomerStats />
+            </Grid>
+            {/* <Grid xs={3} item>
+                <HoursPlayed />
+            </Grid> */}
         </Grid>
     )
 }

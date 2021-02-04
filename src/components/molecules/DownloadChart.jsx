@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     text: {
         fontSize: theme.typography.subtitle2.fontSize,
-        fontWeight: theme.typography.fontWeightMedium,
+        fontWeight: theme.typography.fontWeightBold,
         color: theme.palette.secondary.main
     },
     date: {
