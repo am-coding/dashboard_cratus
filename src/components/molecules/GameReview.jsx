@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Typography, Container } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 import GameReviewIcon from '../../assets/game-review.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '1rem',
         borderRadius: '15px',
+        height: '100%'
     },
     title: {
         fontSize: theme.typography.caption.fontSize,
@@ -22,9 +23,7 @@ const GameReview = () => {
     return (
         <Paper className={classes.root}>
             <Typography className={classes.title}>Game Reviews</Typography>
-            <Container>
                 <img width="100%" height="auto" src={GameReviewIcon} alt="game-review" />
-                </Container>
         </Paper>
     )
 }
