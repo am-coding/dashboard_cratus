@@ -31,7 +31,10 @@ const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
       width: '90%',
-      margin: '0 auto'
+      margin: '0 auto',
+      [theme.breakpoints.up('xl')]: {
+        marginTop: '2rem'
+    },
     },
   }));
 
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 const Analytics = () => {
     const classes = useStyles();
     return (
-        <Grid spacing={8} container className={classes.root}>
+        <Grid spacing={5} container className={classes.root}>
             {statCardData.map((data, index) => {
                 return(
                     <Grid key={index} xs={12} sm={6} md={3} item>
@@ -53,16 +56,16 @@ const Analytics = () => {
                     data="$115,323.00"
                 />
             </Grid>
-            <Grid xs={6} md={3} item>
+            <Grid xs={12} md={3} item>
                 <GameReview />
             </Grid>
-            <Grid xs={6} item>
+            <Grid xs={12} md={6} item>
                 <DownloadChart />
             </Grid>
-            <Grid xs={3} item>
+            <Grid xs={12} md={6} lg={3} item>
                 <HoursPlayed />
             </Grid>
-            <Grid xs={3} item>
+            <Grid xs={12} md={6} lg={3} item>
                 <CustomerStats />
             </Grid>
         </Grid>

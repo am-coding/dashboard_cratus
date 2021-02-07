@@ -7,6 +7,18 @@ const StraightLineGraph = () => {
             selection: {
                 enabled: false
             },
+            states: {
+              hover: {
+                  filter: {
+                      type: 'none',
+                  },
+              },
+              active: {
+                filter: {
+                  type: 'none'
+                }
+              }
+          },
             tooltip: {
                 enabled: false
             },

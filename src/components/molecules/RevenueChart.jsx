@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         padding: '1.3rem',
         [theme.breakpoints.up('xl')]: {
-            padding: '2.3rem',
+            padding: '2rem',
         },
         borderRadius: '15px',
         height: '100%'
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightMedium,
         fontSize: theme.typography.caption.fontSize,
         [theme.breakpoints.up('xl')]: {
-            fontSize: theme.typography.subtitle1.fontSize,
+            fontSize: theme.typography.h5.fontSize,
         },
     },
     data: {
@@ -26,11 +26,18 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightBold,
         fontSize: theme.typography.h6.fontSize,
         [theme.breakpoints.up('xl')]: {
-            fontSize: theme.typography.h4.fontSize,
+            fontSize: theme.typography.h3.fontSize,
         },
     },
     button: {
         padding: '0.35rem',
+    },
+    container: {
+        maxWidth: '92%',
+        height: '8rem',
+        [theme.breakpoints.up('xl')]: {
+            height: '18rem',
+        },
     }
   }));
 
@@ -53,7 +60,7 @@ function RevenueChart({title, data}) {
                     <IconButton className={classes.button}><img width="100%" height="auto" src={rightArrow} alt="right-arrow-icon" /></IconButton>
                 </Box>
             </Box>
-            <Container>
+            <Container disableGutters={true} className={classes.container}>
             <LineChart />
             </Container>
         </Paper>

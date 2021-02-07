@@ -6,21 +6,31 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      height: '100%',
       padding: '1rem',
       borderRadius: '15px',
     }, 
     box: {
-        marginBottom: '0.4rem'
+        marginBottom: '0.4rem',
+        [theme.breakpoints.up('xl')]: {
+            marginBottom: '1.8rem',
+        },
     },
     text: {
         fontSize: theme.typography.subtitle2.fontSize,
         fontWeight: theme.typography.fontWeightBold,
-        color: theme.palette.secondary.main
+        color: theme.palette.secondary.main,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.h6.fontSize,
+        },
     },
     date: {
         fontSize: theme.typography.caption.fontSize,
         fontWeight: theme.typography.fontWeightMedium,
-        color: theme.palette.secondary.main
+        color: theme.palette.secondary.main,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.subtitle1.fontSize,
+        },
     },
     container: {
         paddingRight: '1.5rem'

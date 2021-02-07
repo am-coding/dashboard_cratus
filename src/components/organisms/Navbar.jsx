@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 340,
     },
     backgroundColor: 'white', 
-    height: '14vh',
+    height: '13vh',
     boxShadow: 'none',
     justifyContent: 'center',
   },
@@ -100,10 +100,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   logo: {
-      height: '14vh',
+      height: '13vh',
       display: 'flex',
       alignItems: 'center',
       marginLeft: '1rem',
+      padding: '0.5rem'
   },
   item: {
       padding: '0.1rem',

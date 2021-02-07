@@ -32,7 +32,7 @@ const data = [
   ];
 const CustomLineChart = () => {
     return (
-       <ResponsiveContainer width="100%" height={110}>
+       <ResponsiveContainer width="100%" height="100%">
          <LineChart data={data}>
                <CartesianGrid horizontal={false} strokeWidth="3" />
                <Line type="linear" dataKey="uv" stroke="#B9181E" strokeWidth="4" dot={false} />

@@ -27,8 +27,8 @@ const DetailedLineChart = () => {
        <ResponsiveContainer width="100%" height={220}>
          <LineChart data={data}>
                <CartesianGrid horizontal={false} strokeWidth="3"/>
-                <XAxis dx={5} tick={{fontSize: 11}} dy={17} axisLine={false} tickLine={false} dataKey="name" />
-                <YAxis dx={-35} tick={{fontSize: 11}} dataKey="downloads" axisLine={false} tickLine={false} />
+                <XAxis dx={5} tick={{fontSize: 12}} dy={17} axisLine={false} tickLine={false} dataKey="name" />
+                <YAxis dx={-35} tick={{fontSize: 12}} dataKey="downloads" axisLine={false} tickLine={false} />
                <Line type="linear" dataKey="data" stroke="#B9181E" strokeWidth="4" dot={false} />
          </LineChart>
         </ResponsiveContainer>

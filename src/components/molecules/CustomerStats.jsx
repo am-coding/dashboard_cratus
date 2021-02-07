@@ -8,23 +8,34 @@ import RectangleRPG from '../../assets/Rectangle-action.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      height: '100%',
       padding: '1.5rem',
       borderRadius: '15px',
     }, 
     gridContainer: {
       maxWidth: '64%',
       margin: '0 auto',
-      alignItems: 'center'
+      alignItems: 'center',
+      textAlign: 'center',
+      [theme.breakpoints.up('xl')]: {
+        maxWidth: '34%',
+      },
     },
     title: {
         fontSize: theme.typography.subtitle2.fontSize,
         fontWeight: theme.typography.fontWeightBold,
-        color: theme.palette.secondary.main
+        color: theme.palette.secondary.main,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.h6.fontSize,
+        },
     },
     label: {
         fontSize: theme.typography.caption.fontSize,
         fontWeight: theme.typography.fontWeightMedium,
-        color: theme.palette.secondary.main
+        color: theme.palette.secondary.main,
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.h6.fontSize,
+        },
     }
   }));
 

@@ -5,6 +5,7 @@ import { Paper, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      height: '100%',
       padding: '0.5rem',
       borderRadius: '15px',
     },
@@ -12,7 +13,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: theme.typography.subtitle2.fontSize,
         fontWeight: theme.typography.fontWeightBold,
         color: theme.palette.secondary.main,
-        padding: '1rem 1rem 0rem 1.5rem'
+        padding: '1rem 1rem 0rem 1.5rem',
+        [theme.breakpoints.up('xl')]: {
+            fontSize: theme.typography.h6.fontSize,
+        },
     },
   }));
 
