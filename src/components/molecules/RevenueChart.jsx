@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
             padding: '2rem',
         },
         borderRadius: '15px',
-        height: '100%'
+        height: '100%',
     },
     title: {
         color: theme.palette.secondary.main,
@@ -34,10 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         maxWidth: '92%',
-        height: '8rem',
-        [theme.breakpoints.up('xl')]: {
-            height: '18rem',
-        },
+        height: '67%',
     }
   }));
 

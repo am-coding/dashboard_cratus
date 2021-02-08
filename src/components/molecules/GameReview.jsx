@@ -27,7 +27,7 @@ const GameReview = () => {
     return (
         <Paper className={classes.root}>
             <Typography className={classes.title}>Game Reviews</Typography>
-                <img width="100%" height="auto" src={GameReviewIcon} alt="game-review" />
+            <img width="100%" height="100%" style={{paddingBottom: '1rem'}} src={GameReviewIcon} alt="game-review" />
         </Paper>
     )
 }

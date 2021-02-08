@@ -33,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     container: {
-        paddingRight: '1.5rem'
+        paddingRight: '1.5rem',
+        height: '80%'
     }
   }));
 

@@ -36,9 +36,9 @@ const StraightLineGraph = () => {
             },
             plotOptions: {
               bar: {
-                borderRadius: 50,
+                borderRadius: 200,
                 horizontal: true,
-                barHeight: '45%',
+                barHeight: '35%',
               }
             },
             dataLabels: {
@@ -135,7 +135,7 @@ const StraightLineGraph = () => {
           ],
     }
 
-    return <Chart options={chartOptions.options} series={chartSeries.series} type="rangeBar" width="100%" height={240} />
+    return <Chart options={chartOptions.options} series={chartSeries.series} type="rangeBar" width="100%" height="85%" />
 }
 
 export default StraightLineGraph;

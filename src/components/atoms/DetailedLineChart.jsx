@@ -24,7 +24,7 @@ const data = [
 
 const DetailedLineChart = () => {
     return (
-       <ResponsiveContainer width="100%" height={220}>
+       <ResponsiveContainer width="100%" height="100%">
          <LineChart data={data}>
                <CartesianGrid horizontal={false} strokeWidth="3"/>
                 <XAxis dx={5} tick={{fontSize: 12}} dy={17} axisLine={false} tickLine={false} dataKey="name" />

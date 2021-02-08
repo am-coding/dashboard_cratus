@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
    fontSize: theme.typography.subtitle2.fontSize,
+   fontWeight: theme.typography.fontWeightBold,
    [theme.breakpoints.up('xl')]: {
     fontSize: theme.typography.h5.fontSize,
   },
