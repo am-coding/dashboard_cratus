@@ -13,8 +13,9 @@ import customer from '../../assets/customer.svg';
 import manage from '../../assets/manage.svg';
 import document from '../../assets/Document.svg';
 import setting from '../../assets/Setting.svg';
-import InputWithIcon from '../atoms/SearchInput';
+import SearchInput from '../atoms/SearchInput';
 
+// Navbar Items Array of objects
 const items =  [
   {
     icon: analytics,
@@ -24,27 +25,27 @@ const items =  [
   {
     icon: customer,
     title: 'Customers',
-    link: 'customers',
+    link: '/customers',
   },
   {
     icon: bag,
     title: 'Billing',
-    link: 'billing',
+    link: '/billing',
   },
   {
     icon: document,
     title: 'Manage Games',
-    link: 'manage-games',
+    link: '/manage-games',
   },
   {
     icon: manage,
     title: 'Account',
-    link: 'account',
+    link: '/account',
   },
   {
     icon: website,
     title: 'Website',
-    link: 'website',
+    link: '/website',
   },
 ]
 
@@ -59,15 +60,21 @@ const useStyles = makeStyles((theme) => ({
       width: drawerWidth,
       flexShrink: 0,
     },
+    [theme.breakpoints.up('xl')]: {
+      width: 340,
+    },
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
-     
     },
     marginLeft: drawerWidth,
+    [theme.breakpoints.up('xl')]: {
+      width: `calc(100% - 340px)`,
+      marginLeft: 340,
+    },
     backgroundColor: 'white', 
-    height: '14vh',
+    height: '13vh',
     boxShadow: 'none',
     justifyContent: 'center',
   },
@@ -80,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   drawerPaper: {
     width: drawerWidth,
+    [theme.breakpoints.up('xl')]: {
+      width: 340,
+    },
   },
   toolbar: {
     display: 'flex',
@@ -90,8 +100,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   logo: {
-      padding: '1rem',
-      marginTop: '1rem'
+      height: '13vh',
+      display: 'flex',
+      alignItems: 'center',
+      marginLeft: '1rem',
+      padding: '0.5rem'
   },
   item: {
       padding: '0.1rem',
@@ -103,6 +116,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+// Navigation Sidebar
 function Navbar(props) {
   const { window } = props;
   const classes = useStyles();
@@ -114,9 +128,11 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <div>
-      <img className={classes.logo} src={logo} alt="logo" />
-      <div />
+    <>
+    <div className={classes.logo}>
+    <img width="100%" height="auto" src={logo} alt="logo" />
+    </div>
+      <div>
       <List>
         {items.map((data) => (
           <ListItem className={classes.item} key={data.title}>
@@ -130,9 +146,10 @@ function Navbar(props) {
       </List>
       <Divider variant="middle" />
       <div className={classes.setting}>
-        <NavButton icon={setting} title="Settings" />
+        <NavButton icon={setting} title="Settings" link="/settings" />
       </div>
     </div>
+    </>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -151,7 +168,7 @@ function Navbar(props) {
           >
             <MenuIcon htmlColor="#808191" />
           </IconButton>
-          <InputWithIcon />
+          <SearchInput />
           <ManageGrid />
         </Toolbar>
       </AppBar>

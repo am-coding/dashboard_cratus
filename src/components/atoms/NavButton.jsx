@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import {
   NavLink
 } from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
    button: {
        color:  theme.palette.secondary.main,
@@ -15,7 +16,11 @@ const useStyles = makeStyles((theme) => ({
        marginLeft: '1rem',
        paddingLeft: '1.5rem', 
        justifyContent: "flex-start",
-       fontSize: '0.7rem',
+       fontSize: theme.typography.caption.fontSize,
+       [theme.breakpoints.up('xl')]: {
+        fontSize: theme.typography.subtitle1.fontSize,
+        height: '4rem',
+      },
        fontWeight: '500',
        '&:hover': {
            backgroundColor: theme.palette.primary.main,
@@ -34,13 +39,17 @@ const useStyles = makeStyles((theme) => ({
 },
 image: {
     filter: 'invert(1)',
+},
+activeLink: {
+  color: 'red'
 }
   }));
-  
+
+//Navigation Sidebar Button
 const NavButton = ({title, icon, link}) => {
     const classes = useStyles();
     return (
-        <Button component={NavLink} to={{pathname: `${link}`}} className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
+        <Button exact component={NavLink} to={{pathname: `${link}`}} className={classes.button} startIcon={<img src={icon} className={classes.image} alt="icon" width="16px" />}>{title}</Button>
     );
   }
 

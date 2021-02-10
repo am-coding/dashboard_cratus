@@ -1,32 +1,13 @@
 import Navbar from './components/organisms/Navbar'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Analytics from './components/templates/Analytics'
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import './App.css';
+import { THEME } from './theme';  
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-
-const THEME = createMuiTheme({
-  typography: {
-   "fontFamily": `"Inter", sans-serif`,
-   "fontSize": 14,
-   "fontWeightLight": 300,
-   "fontWeightRegular": 400,
-   "fontWeightMedium": 500,
-   "fontWeightBold": 600,
-  },
-  palette: {
-    primary: {
-      main: '#B9181E'
-    },
-    secondary: {
-      main: '#808191'
-    },
-    white: {
-      main: '#FFFFFF'
-    }
-  },
-});
 
 
 function App() {
@@ -34,10 +15,11 @@ function App() {
     <Router>
     <MuiThemeProvider theme={THEME}>
     <div className="App">
+    <Navbar />
     <Switch>
-          <Route path="/dashboard">
-            <Navbar />
-          </Route>
+          <Route exact path="/dashboard">
+            <Analytics />
+          </Route> 
         </Switch>
         </div> 
     </MuiThemeProvider>
