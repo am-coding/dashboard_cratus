@@ -4,6 +4,7 @@ import { Paper, Box, Typography, IconButton, Container } from '@material-ui/core
 import LineChart from '../atoms/LineChart';
 import rightArrow from '../../assets/right-arrow.png';
 import leftArrow from '../../assets/left-arrow.png';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '1.3rem',
