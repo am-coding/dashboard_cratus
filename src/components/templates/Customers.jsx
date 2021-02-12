@@ -1,5 +1,6 @@
 import React from 'react'
 import Subscribers from '../molecules/Subscribers'
+import MostHoursPlayed from '../molecules/MostHoursPlayed'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -206,6 +207,9 @@ const Customers = () => {
                     data={newSubscribers}
                 />
             </Grid> 
+            <Grid xs={6} item>
+                <MostHoursPlayed />
+            </Grid>
         </Grid>
     )
 }
