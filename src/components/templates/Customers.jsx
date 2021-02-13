@@ -194,23 +194,27 @@ const Customers = () => {
     const classes= useStyles()
 
     return (
+        <>
         <Grid spacing={6} className={classes.root} container>
-            <Grid xs={6} item>
+            <Grid xs={12} item>
                 <Subscribers 
                     title="Subscribers"
                     data={subscribers}
                 />
             </Grid>
-            <Grid xs={6} item>
+        </Grid>
+        <Grid spacing={6} className={classes.root} container direction="row">
+            <Grid xs={12} item>
                 <Subscribers 
                     title="New Subscribers"
                     data={newSubscribers}
                 />
             </Grid> 
-            <Grid xs={6} item>
+            <Grid xs={12} item>
                 <MostHoursPlayed />
             </Grid>
-        </Grid>
+            </Grid>
+        </>
     )
 }
 
