@@ -1,6 +1,7 @@
 import Navbar from "./components/organisms/Navbar";
 import Analytics from "./components/templates/Analytics";
 import Customers from "./components/templates/Customers";
+import Billing from "./components/templates/Billing";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import "./App.css";
 import { THEME } from "./theme";
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route exact path="/customers">
               <Customers />
+            </Route>
+            <Route exact path="/billing">
+              <Billing />
             </Route>
           </Switch>
         </div>
