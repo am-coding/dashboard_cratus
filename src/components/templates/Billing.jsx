@@ -2,23 +2,24 @@ import React from 'react';
 import StatCard from '../atoms/StatCard';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import UpcomingPayments from '../molecules/UpcomingPayments';
 
 const statCardData = [
     {
-        title: 'MRR',
-        stat: '$23,285.00'
+        title: 'Monthly Price Plan',
+        stat: '$5.99'   
     },
     { 
-        title: 'Active Subscription',
-        stat: '4,756'
+        title: 'Annual Price Plan',
+        stat: '$65.00'
     },
     {
-        title: 'Churn',
-        stat: '5.2%'
+        title: 'Set Gift Subscription',
+        stat: '$50'
     },
     {
-        title: 'New Customers',
-        stat: '612'
+        title: 'Trial Time Period',
+        stat: '14 days'
     }
 ]
 
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2rem'
     },
     },
-  }));
+}));
 
 // Analytics Page/Template
 const Billing = () => {
@@ -45,6 +46,9 @@ const Billing = () => {
                     </Grid>
                 )
             })}
+            <Grid item>
+                <UpcomingPayments />
+            </Grid>
         </Grid>
     )
 }
