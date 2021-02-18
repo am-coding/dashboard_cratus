@@ -1,4 +1,4 @@
-import Navbar from "./components/organisms/Navbar";
+import DesktopHome from "./components/templates/DesktopHome";
 import Analytics from "./components/templates/Analytics";
 import Customers from "./components/templates/Customers";
 import Billing from "./components/templates/Billing";
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <MuiThemeProvider theme={THEME}>
         <div className="App">
-          <Navbar />
+          <DesktopHome />
           <Switch>
             <Route exact path="/dashboard">
               <Analytics />
