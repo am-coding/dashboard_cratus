@@ -12,8 +12,10 @@ function App() {
     <Router>
       <MuiThemeProvider theme={THEME}>
         <div className="App">
-          <DesktopHome />
           <Switch>
+            <Route exact path="/">
+              <DesktopHome />
+            </Route>
             <Route exact path="/dashboard">
               <Analytics />
             </Route>
