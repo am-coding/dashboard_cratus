@@ -1,6 +1,7 @@
-import Navbar from "./components/organisms/Navbar";
+import DesktopHome from "./components/templates/DesktopHome";
 import Analytics from "./components/templates/Analytics";
 import Customers from "./components/templates/Customers";
+import Billing from "./components/templates/Billing";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import "./App.css";
 import { THEME } from "./theme";
@@ -11,13 +12,16 @@ function App() {
     <Router>
       <MuiThemeProvider theme={THEME}>
         <div className="App">
-          <Navbar />
+          <DesktopHome />
           <Switch>
             <Route exact path="/dashboard">
               <Analytics />
             </Route>
             <Route exact path="/customers">
               <Customers />
+            </Route>
+            <Route exact path="/billing">
+              <Billing />
             </Route>
           </Switch>
         </div>
