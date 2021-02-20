@@ -5,9 +5,10 @@ import HeaderBox from '../molecules/HeaderBox';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        position: 'relative',
         backgroundImage: `url(${Img})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100%',
+        backgroundSize: 'cover',
         width: '100%',
         height: '50vh',
     },

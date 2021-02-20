@@ -47,5 +47,8 @@ export const THEME = createMuiTheme({
     white: {
       main: "#FFFFFF",
     },
+    accent: {
+      main: "#FF754C",
+    },
   },
 });
